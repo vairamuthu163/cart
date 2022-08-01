@@ -11,5 +11,6 @@ import java.util.List;
 public interface CartRepository extends MongoRepository<Cart,Integer> {
     Cart findById(int id);
     Cart save(Cart cart);
+    List<Cart> findAll();
 }
 

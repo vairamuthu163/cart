@@ -1,6 +1,10 @@
-package com.example.cart.document;
+package com.example.cart.dto;
 
-public class Product {
+import java.io.Serializable;
+import java.util.List;
+
+public class ProductsReturn  {
+
     private int id;
     private String name;
     private String brand;
@@ -8,19 +12,14 @@ public class Product {
     private String colour;
     private Double price;
     private String thumbnail;
+    private List<String> image;
+    private String description;
     private Double rating;
     private int stock;
+    private int productSold;
+    private int sellerId;
     private String fuelType;
     private int seatingCapacity;
-    private int quantity;
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
 
     public int getId() {
         return id;
@@ -78,6 +77,22 @@ public class Product {
         this.thumbnail = thumbnail;
     }
 
+    public List<String> getImage() {
+        return image;
+    }
+
+    public void setImage(List<String> image) {
+        this.image = image;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public Double getRating() {
         return rating;
     }
@@ -94,6 +109,22 @@ public class Product {
         this.stock = stock;
     }
 
+    public int getProductSold() {
+        return productSold;
+    }
+
+    public void setProductSold(int productSold) {
+        this.productSold = productSold;
+    }
+
+    public int getSellerId() {
+        return sellerId;
+    }
+
+    public void setSellerId(int sellerId) {
+        this.sellerId = sellerId;
+    }
+
     public String getFuelType() {
         return fuelType;
     }
@@ -108,5 +139,26 @@ public class Product {
 
     public void setSeatingCapacity(int seatingCapacity) {
         this.seatingCapacity = seatingCapacity;
+    }
+
+    @Override
+    public String toString() {
+        return "ProductsReturn{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", brand='" + brand + '\'' +
+                ", category='" + category + '\'' +
+                ", colour='" + colour + '\'' +
+                ", price=" + price +
+                ", thumbnail='" + thumbnail + '\'' +
+                ", image=" + image +
+                ", description='" + description + '\'' +
+                ", rating=" + rating +
+                ", stock=" + stock +
+                ", productSold=" + productSold +
+                ", sellerId=" + sellerId +
+                ", fuelType='" + fuelType + '\'' +
+                ", seatingCapacity=" + seatingCapacity +
+                '}';
     }
 }
